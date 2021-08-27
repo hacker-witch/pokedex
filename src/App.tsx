@@ -1,14 +1,26 @@
 import { PokemonList } from "components/PokemonList";
 import styled from "styled-components";
 
-export const App = () => {
+export { StyledApp as App };
+
+type AppProps = {
+  className?: string;
+};
+
+const App = ({ className }: AppProps) => {
   return (
-    <Container>
+    <Container className={className}>
       <Title>Pokédex</Title>
       <PokemonList />
     </Container>
   );
 };
+
+const StyledApp = styled(App)`
+  ${PokemonList} {
+    margin-top: 2.8125rem;
+  }
+`;
 
 const Container = styled.div`
   padding: 0 1rem;
