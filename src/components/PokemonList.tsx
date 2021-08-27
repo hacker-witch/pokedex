@@ -10,7 +10,7 @@ type PokemonListProps = {
 
 const PokemonList = ({ className }: PokemonListProps) => (
   <ul className={className}>
-    <Item>
+    <PokemonCard>
       <Info>
         <Number>#001</Number>
         <Name>Bulbassaur</Name>
@@ -20,7 +20,7 @@ const PokemonList = ({ className }: PokemonListProps) => (
         </BadgeGroup>
       </Info>
       <Img src={bulbassaur} alt="" />
-    </Item>
+    </PokemonCard>
   </ul>
 );
 
@@ -30,7 +30,7 @@ const StyledPokemonList = styled(PokemonList)`
   border-radius: 10px;
 `;
 
-const Item = styled.li`
+const PokemonCard = styled.li`
   position: relative;
   padding: 1.25rem;
   background-image: url(${pattern}), url(${pokeball});
