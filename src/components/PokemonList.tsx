@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Badge } from "components/Badge";
 import bulbassaur from "./bulbassaur.png";
 import pattern from "img/pattern.svg";
+import pokeball from "img/pokeball.svg";
 
 type PokemonListProps = {
   className?: string;
@@ -32,10 +33,10 @@ const StyledPokemonList = styled(PokemonList)`
 const Item = styled.li`
   position: relative;
   padding: 1.25rem;
-  background-image: url(${pattern});
+  background-image: url(${pattern}), url(${pokeball});
   background-repeat: no-repeat;
-  background-size: 4.625rem 2rem;
-  background-position: 5.625rem 0.3125rem;
+  background-size: 4.625rem 2rem, 145px;
+  background-position: 5.625rem 0.3125rem, right -0.9375rem center;
 `;
 
 const Info = styled.div`
