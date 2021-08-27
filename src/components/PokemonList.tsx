@@ -35,7 +35,7 @@ const PokemonCard = styled.li`
   padding: 1.25rem;
   background-image: url(${pattern}), url(${pokeball});
   background-repeat: no-repeat;
-  background-size: 4.625rem 2rem, 145px;
+  background-size: 4.625rem 2rem, 9.0625rem;
   background-position: 5.625rem 0.3125rem, right -0.9375rem center;
 `;
 
