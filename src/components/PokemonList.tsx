@@ -66,7 +66,7 @@ const Img = styled.img`
   height: 8.125rem;
   position: absolute;
   right: 0;
-  top: -25px;
+  top: -1.5625rem;
 `;
 
 export { StyledPokemonList as PokemonList };
