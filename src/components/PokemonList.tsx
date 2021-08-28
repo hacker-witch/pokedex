@@ -39,6 +39,20 @@ const PokemonCard = styled.li`
   background-repeat: no-repeat;
   background-size: 4.625rem 2rem, 9.0625rem;
   background-position: 5.625rem 0.3125rem, right -0.9375rem center;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    height: 5.9375rem;
+    box-shadow: 0 0.625rem 20px
+      ${(props) => props.theme.colors.background.type[PokemonType.Grass]};
+    opacity: 0.4;
+  }
 `;
 
 const Info = styled.div`
