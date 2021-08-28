@@ -27,14 +27,14 @@ const PokemonList = ({ className }: PokemonListProps) => (
 
 const StyledPokemonList = styled(PokemonList)`
   list-style-type: none;
-  background: ${(props) =>
-    props.theme.colors.background.type[PokemonType.Grass]};
-  border-radius: 10px;
 `;
 
 const PokemonCard = styled.li`
   position: relative;
   padding: 1.25rem;
+  border-radius: 10px;
+  background-color: ${(props) =>
+    props.theme.colors.background.type[PokemonType.Grass]};
   background-image: url(${pattern}), url(${pokeball});
   background-repeat: no-repeat;
   background-size: 4.625rem 2rem, 9.0625rem;
