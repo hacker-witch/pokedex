@@ -30,6 +30,7 @@ const StyledPokemonList = styled(PokemonList)`
 `;
 
 const PokemonCard = styled.li`
+  max-width: 20.875rem;
   position: relative;
   padding: 1.25rem;
   border-radius: 10px;
