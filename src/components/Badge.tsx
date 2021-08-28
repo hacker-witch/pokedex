@@ -28,7 +28,7 @@ type BadgeProps = {
 
 const Badge = ({ className, type }: BadgeProps) => (
   <div className={className}>
-    <Icon type={type} /> {type}
+    <Icon type={type} /> {type.toLowerCase()}
   </div>
 );
 
@@ -37,6 +37,7 @@ const StyledBadge = styled(Badge)`
   grid-template-columns: min-content min-content;
   gap: 0.3125rem;
   padding: 0.3125rem;
+  text-transform: capitalize;
   font-size: 0.75rem;
   font-weight: 500;
   color: ${(props) => props.theme.colors.text.white};
