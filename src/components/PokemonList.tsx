@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Badge } from "components/Badge";
+import { PokemonType } from "types/PokemonType";
 import bulbassaur from "./bulbassaur.png";
 import pattern from "img/pattern.svg";
 import pokeball from "img/pokeball.svg";
@@ -15,8 +16,8 @@ const PokemonList = ({ className }: PokemonListProps) => (
         <Number>#001</Number>
         <Name>Bulbassaur</Name>
         <BadgeGroup>
-          <Badge type="grass" />
-          <Badge type="poison" />
+          <Badge type={PokemonType.Grass} />
+          <Badge type={PokemonType.Poison} />
         </BadgeGroup>
       </Info>
       <Img src={bulbassaur} alt="" />
@@ -26,7 +27,8 @@ const PokemonList = ({ className }: PokemonListProps) => (
 
 const StyledPokemonList = styled(PokemonList)`
   list-style-type: none;
-  background: ${(props) => props.theme.colors.background.type.grass};
+  background: ${(props) =>
+    props.theme.colors.background.type[PokemonType.Grass]};
   border-radius: 10px;
 `;
 

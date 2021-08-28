@@ -1,49 +1,12 @@
 import "styled-components";
+import { PokemonType } from "types/PokemonType";
 
 declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
-      type: {
-        bug: string;
-        dark: string;
-        dragon: string;
-        electric: string;
-        fairy: string;
-        fighting: string;
-        fire: string;
-        flying: string;
-        ghost: string;
-        grass: string;
-        ground: string;
-        ice: string;
-        normal: string;
-        poison: string;
-        psychic: string;
-        rock: string;
-        steel: string;
-        water: string;
-      };
+      type: Record<PokemonType, string>;
       background: {
-        type: {
-          bug: string;
-          dark: string;
-          dragon: string;
-          electric: string;
-          fairy: string;
-          fighting: string;
-          fire: string;
-          flying: string;
-          ghost: string;
-          grass: string;
-          ground: string;
-          ice: string;
-          normal: string;
-          poison: string;
-          psychic: string;
-          rock: string;
-          steel: string;
-          water: string;
-        };
+        type: Record<PokemonType, string>;
       };
       text: {
         white: string;
