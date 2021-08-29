@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Badge } from "components/Badge";
-import { PokemonType } from "types/PokemonType";
+import { Pokemon } from "types/Pokemon";
 import pattern from "img/pattern.svg";
 import pokeball from "img/pokeball.svg";
 
@@ -8,30 +8,21 @@ export { StyledPokemonCard as PokemonCard };
 
 type PokemonCardProps = {
   className?: string;
-  pokedexNumber: number;
-  name: string;
-  types: PokemonType[];
-  image: string;
+  pokemon: Pokemon;
 };
 
-const PokemonCard = ({
-  className,
-  pokedexNumber,
-  name,
-  types,
-  image,
-}: PokemonCardProps) => (
+const PokemonCard = ({ className, pokemon }: PokemonCardProps) => (
   <div className={className}>
     <Info>
-      <Number>{"#" + pokedexNumber.toString().padStart(3, "0")}</Number>
-      <Name>{name.toLowerCase()}</Name>
+      <Number>{"#" + pokemon.pokedexNumber.toString().padStart(3, "0")}</Number>
+      <Name>{pokemon.name.toLowerCase()}</Name>
       <BadgeGroup>
-        {types.map((type) => (
+        {pokemon.types.map((type) => (
           <Badge key={type} type={type} />
         ))}
       </BadgeGroup>
     </Info>
-    <Img src={image} alt="" />
+    <Img src={pokemon.image} alt="" />
   </div>
 );
 
@@ -40,7 +31,7 @@ const StyledPokemonCard = styled(PokemonCard)`
   padding: 1.25rem;
   border-radius: 10px;
   background-color: ${(props) =>
-    props.theme.colors.background.type[props.types[0]]};
+    props.theme.colors.background.type[props.pokemon.types[0]]};
   background-image: url(${pattern}), url(${pokeball});
   background-repeat: no-repeat;
   background-size: 4.625rem 2rem, 9.0625rem;
@@ -56,7 +47,7 @@ const StyledPokemonCard = styled(PokemonCard)`
     width: 88%;
     height: 5.9375rem;
     box-shadow: 0 0.625rem 20px
-      ${(props) => props.theme.colors.background.type[props.types[0]]};
+      ${(props) => props.theme.colors.background.type[props.pokemon.types[0]]};
     opacity: 0.4;
   }
 `;

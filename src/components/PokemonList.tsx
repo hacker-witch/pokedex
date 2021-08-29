@@ -13,7 +13,7 @@ const PokemonList = ({ className, pokemons }: PokemonListProps) => (
   <ul className={className}>
     {pokemons.map((pokemon) => (
       <Item key={pokemon.pokedexNumber}>
-        <PokemonCard {...pokemon} />
+        <PokemonCard pokemon={pokemon} />
       </Item>
     ))}
   </ul>
