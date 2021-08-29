@@ -21,10 +21,12 @@ const PokemonList = ({ className, pokemons }: PokemonListProps) => (
 
 const StyledPokemonList = styled(PokemonList)`
   list-style-type: none;
-  display: grid;
-  grid-gap: 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.875rem;
 `;
 
 const Item = styled.li`
-  max-width: 20.875rem;
+  flex-basis: 18.75rem;
+  flex-grow: 1;
 `;
