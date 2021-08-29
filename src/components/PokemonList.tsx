@@ -12,21 +12,16 @@ type PokemonListProps = {
 const PokemonList = ({ className, pokemons }: PokemonListProps) => (
   <ul className={className}>
     {pokemons.map((pokemon) => (
-      <Item key={pokemon.pokedexNumber}>
+      <li key={pokemon.pokedexNumber}>
         <PokemonCard pokemon={pokemon} />
-      </Item>
+      </li>
     ))}
   </ul>
 );
 
 const StyledPokemonList = styled(PokemonList)`
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 1.875rem;
-`;
-
-const Item = styled.li`
-  flex-basis: 18.75rem;
-  flex-grow: 1;
 `;
