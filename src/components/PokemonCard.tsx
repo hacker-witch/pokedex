@@ -10,13 +10,14 @@ export { StyledPokemonCard as PokemonCard };
 type PokemonCardProps = {
   className?: string;
   pokedexNumber: number;
+  name: string;
 };
 
-const PokemonCard = ({ className, pokedexNumber }: PokemonCardProps) => (
+const PokemonCard = ({ className, pokedexNumber, name }: PokemonCardProps) => (
   <div className={className}>
     <Info>
       <Number>{"#" + pokedexNumber.toString().padStart(3, "0")}</Number>
-      <Name>Bulbassaur</Name>
+      <Name>{name.toLowerCase()}</Name>
       <BadgeGroup>
         <Badge type={PokemonType.Grass} />
         <Badge type={PokemonType.Poison} />
@@ -65,6 +66,7 @@ const Number = styled.div`
 `;
 
 const Name = styled.h2`
+  text-transform: capitalize;
   font-size: 1.625rem;
   font-weight: 700;
   color: ${(props) => props.theme.colors.text.white};
