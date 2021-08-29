@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { PokemonList } from "components/PokemonList";
-import { pokemons } from "pokemons";
 
 export { StyledApp as App };
 
@@ -15,7 +14,7 @@ const App = ({ className }: AppProps) => {
         <Title>Pokédex</Title>
       </header>
       <main>
-        <PokemonList pokemons={pokemons} />
+        <PokemonList pokemons={[]} />
       </main>
     </Container>
   );
