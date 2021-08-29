@@ -1,15 +1,8 @@
 import styled from "styled-components";
 import { PokemonCard } from "components/PokemonCard";
-import { PokemonType } from "types/PokemonType";
+import { Pokemon } from "types/Pokemon";
 
 export { StyledPokemonList as PokemonList };
-
-type Pokemon = {
-  pokedexNumber: number;
-  name: string;
-  types: PokemonType[];
-  image: string;
-};
 
 type PokemonListProps = {
   className?: string;
