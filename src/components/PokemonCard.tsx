@@ -77,6 +77,6 @@ const Img = styled.img`
   width: 8.125rem;
   height: 8.125rem;
   position: absolute;
-  right: 0;
+  right: 0.625rem;
   top: -1.5625rem;
 `;
