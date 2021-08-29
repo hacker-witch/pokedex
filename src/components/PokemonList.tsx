@@ -21,6 +21,8 @@ const PokemonList = ({ className, pokemons }: PokemonListProps) => (
 
 const StyledPokemonList = styled(PokemonList)`
   list-style-type: none;
+  display: grid;
+  grid-gap: 1.875rem;
 `;
 
 const Item = styled.li`
