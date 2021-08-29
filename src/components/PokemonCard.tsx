@@ -11,16 +11,23 @@ type PokemonCardProps = {
   className?: string;
   pokedexNumber: number;
   name: string;
+  types: PokemonType[];
 };
 
-const PokemonCard = ({ className, pokedexNumber, name }: PokemonCardProps) => (
+const PokemonCard = ({
+  className,
+  pokedexNumber,
+  name,
+  types,
+}: PokemonCardProps) => (
   <div className={className}>
     <Info>
       <Number>{"#" + pokedexNumber.toString().padStart(3, "0")}</Number>
       <Name>{name.toLowerCase()}</Name>
       <BadgeGroup>
-        <Badge type={PokemonType.Grass} />
-        <Badge type={PokemonType.Poison} />
+        {types.map((type) => (
+          <Badge key={type} type={type} />
+        ))}
       </BadgeGroup>
     </Info>
     <Img src={bulbassaur} alt="" />

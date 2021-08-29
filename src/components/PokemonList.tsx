@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { PokemonCard } from "components/PokemonCard";
+import { PokemonType } from "types/PokemonType";
 
 export { StyledPokemonList as PokemonList };
 
@@ -10,7 +11,11 @@ type PokemonListProps = {
 const PokemonList = ({ className }: PokemonListProps) => (
   <ul className={className}>
     <Item>
-      <PokemonCard pokedexNumber={1} name="bulbassaur" />
+      <PokemonCard
+        pokedexNumber={1}
+        name="bulbassaur"
+        types={[PokemonType.Grass, PokemonType.Poison]}
+      />
     </Item>
   </ul>
 );
