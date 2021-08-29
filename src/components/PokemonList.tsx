@@ -10,7 +10,7 @@ type PokemonListProps = {
 const PokemonList = ({ className }: PokemonListProps) => (
   <ul className={className}>
     <Item>
-      <PokemonCard />
+      <PokemonCard pokedexNumber={1} />
     </Item>
   </ul>
 );

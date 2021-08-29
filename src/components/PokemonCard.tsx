@@ -9,12 +9,13 @@ export { StyledPokemonCard as PokemonCard };
 
 type PokemonCardProps = {
   className?: string;
+  pokedexNumber: number;
 };
 
-const PokemonCard = ({ className }: PokemonCardProps) => (
+const PokemonCard = ({ className, pokedexNumber }: PokemonCardProps) => (
   <div className={className}>
     <Info>
-      <Number>#001</Number>
+      <Number>{"#" + pokedexNumber.toString().padStart(3, "0")}</Number>
       <Name>Bulbassaur</Name>
       <BadgeGroup>
         <Badge type={PokemonType.Grass} />
