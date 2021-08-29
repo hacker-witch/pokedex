@@ -12,6 +12,12 @@ const pokemons = [
     types: [PokemonType.Grass, PokemonType.Poison],
     image: bulbassaur,
   },
+  {
+    pokedexNumber: 2,
+    name: "ivysaur",
+    types: [PokemonType.Grass, PokemonType.Poison],
+    image: bulbassaur,
+  },
 ];
 
 type AppProps = {
