@@ -39,7 +39,7 @@ const StyledPokemonCard = styled(PokemonCard)`
   padding: 1.25rem;
   border-radius: 10px;
   background-color: ${(props) =>
-    props.theme.colors.background.type[PokemonType.Grass]};
+    props.theme.colors.background.type[props.types[0]]};
   background-image: url(${pattern}), url(${pokeball});
   background-repeat: no-repeat;
   background-size: 4.625rem 2rem, 9.0625rem;
@@ -55,7 +55,7 @@ const StyledPokemonCard = styled(PokemonCard)`
     width: 88%;
     height: 5.9375rem;
     box-shadow: 0 0.625rem 20px
-      ${(props) => props.theme.colors.background.type[PokemonType.Grass]};
+      ${(props) => props.theme.colors.background.type[props.types[0]]};
     opacity: 0.4;
   }
 `;
