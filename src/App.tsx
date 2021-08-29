@@ -13,7 +13,9 @@ const App = ({ className }: AppProps) => {
       <header>
         <Title>Pokédex</Title>
       </header>
-      <PokemonList />
+      <main>
+        <PokemonList />
+      </main>
     </Container>
   );
 };
