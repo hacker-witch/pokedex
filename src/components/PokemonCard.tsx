@@ -3,7 +3,6 @@ import { Badge } from "components/Badge";
 import { PokemonType } from "types/PokemonType";
 import pattern from "img/pattern.svg";
 import pokeball from "img/pokeball.svg";
-import bulbassaur from "./bulbassaur.png";
 
 export { StyledPokemonCard as PokemonCard };
 
@@ -12,6 +11,7 @@ type PokemonCardProps = {
   pokedexNumber: number;
   name: string;
   types: PokemonType[];
+  image: string;
 };
 
 const PokemonCard = ({
@@ -19,6 +19,7 @@ const PokemonCard = ({
   pokedexNumber,
   name,
   types,
+  image,
 }: PokemonCardProps) => (
   <div className={className}>
     <Info>
@@ -30,7 +31,7 @@ const PokemonCard = ({
         ))}
       </BadgeGroup>
     </Info>
-    <Img src={bulbassaur} alt="" />
+    <Img src={image} alt="" />
   </div>
 );
 
