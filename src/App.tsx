@@ -1,7 +1,18 @@
-import { PokemonList } from "components/PokemonList";
 import styled from "styled-components";
+import { PokemonList } from "components/PokemonList";
+import { PokemonType } from "types/PokemonType";
+import bulbassaur from "img/bulbassaur.png";
 
 export { StyledApp as App };
+
+const pokemons = [
+  {
+    pokedexNumber: 1,
+    name: "bulbassaur",
+    types: [PokemonType.Grass, PokemonType.Poison],
+    image: bulbassaur,
+  },
+];
 
 type AppProps = {
   className?: string;
@@ -14,7 +25,7 @@ const App = ({ className }: AppProps) => {
         <Title>Pokédex</Title>
       </header>
       <main>
-        <PokemonList />
+        <PokemonList pokemons={pokemons} />
       </main>
     </Container>
   );

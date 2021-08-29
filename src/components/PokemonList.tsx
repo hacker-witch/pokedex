@@ -1,24 +1,28 @@
 import styled from "styled-components";
 import { PokemonCard } from "components/PokemonCard";
 import { PokemonType } from "types/PokemonType";
-import bulbassaur from "./bulbassaur.png";
 
 export { StyledPokemonList as PokemonList };
 
-type PokemonListProps = {
-  className?: string;
+type Pokemon = {
+  pokedexNumber: number;
+  name: string;
+  types: PokemonType[];
+  image: string;
 };
 
-const PokemonList = ({ className }: PokemonListProps) => (
+type PokemonListProps = {
+  className?: string;
+  pokemons: Pokemon[];
+};
+
+const PokemonList = ({ className, pokemons }: PokemonListProps) => (
   <ul className={className}>
-    <Item>
-      <PokemonCard
-        pokedexNumber={1}
-        name="bulbassaur"
-        types={[PokemonType.Grass, PokemonType.Poison]}
-        image={bulbassaur}
-      />
-    </Item>
+    {pokemons.map((pokemon) => (
+      <Item key={pokemon.pokedexNumber}>
+        <PokemonCard {...pokemon} />
+      </Item>
+    ))}
   </ul>
 );
 
