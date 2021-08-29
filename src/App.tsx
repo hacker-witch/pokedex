@@ -10,7 +10,9 @@ type AppProps = {
 const App = ({ className }: AppProps) => {
   return (
     <Container className={className}>
-      <Title>Pokédex</Title>
+      <header>
+        <Title>Pokédex</Title>
+      </header>
       <PokemonList />
     </Container>
   );
