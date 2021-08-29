@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { PokemonCard } from "components/PokemonCard";
 
+export { StyledPokemonList as PokemonList };
+
 type PokemonListProps = {
   className?: string;
 };
@@ -20,5 +22,3 @@ const StyledPokemonList = styled(PokemonList)`
 const Item = styled.li`
   max-width: 20.875rem;
 `;
-
-export { StyledPokemonList as PokemonList };
